@@ -31,7 +31,24 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
   -->
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAS8ev4BWen-KaQokv5o92IXDrzL5sRYX8"></script>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+  <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="bower_components/d3/d3.min.js"></script>
+  <script src="bower_components/d3-transform/src/d3-transform.js"></script>
+  <script src="bower_components/cafej/src/ext-array.js"></script>
+  <script src="bower_components/cafej/src/misc.js"></script>
+  <script src="bower_components/cafej/src/micro-observer.js"></script>
+  <script src="bower_components/microplugin/src/microplugin.js"></script>
+  <script src="bower_components/bubble-chart/src/bubble-chart.js"></script>
+  <script src="bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
+  <script src="bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+  <script src="js/bubbleChart.js"></script>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -47,16 +64,20 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
+    <div id="workExperience" class="gray section">
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
+    <div class="gray section">
+      <h2>Where I got my skills</h2>
+      <div class="bubbleChart"></div>
+    </div>
+    <div id="projects" class="section">
       <h2>Projects</h2>
     </div>
-    <div id="education" class="gray">
+    <div id="education" class="gray section">
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
+    <div id="mapDiv" class="section">
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
@@ -85,7 +106,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
+  <!-- <script src="js/jQuery.js"></script> -->
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>

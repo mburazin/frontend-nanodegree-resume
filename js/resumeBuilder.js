@@ -1,4 +1,4 @@
-'%data%'
+
 var bio = {
   "name": "Marko Burazin",
   "role": "Web Developer",
