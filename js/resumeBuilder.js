@@ -18,17 +18,28 @@ var bio = {
     "C",
     "git"
   ],
+  "skillsLogos": [
+    "images/html5_logo.svg",
+    "images/css3_logo.svg",
+    "images/js_logo.svg",
+    "images/erlang_logo.svg",
+    "images/php_logo.svg",
+    "images/c_logo.svg",
+    "images/git_logo.svg",
+  ],
   "biopic": "images/me_naturalpools.png",
 
   "display": function() {
     var formattedName = HTMLheaderName.replace('%data%', this.name);
     var formattedRole = HTMLheaderRole.replace('%data%', this.role);
-    $('#header').prepend(formattedRole);
-    $('#header').prepend(formattedName);
+    var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
+    $('.header-title').prepend(formattedWelcomeMsg)
+    $('.header-title').prepend(formattedRole);
+    $('.header-title').prepend(formattedName);
 
     var formattedMobile = HTMLmobile.replace('%data%', this.contacts.mobile);
-    var formattedEmail = HTMLemail.replace('%data%', this.contacts.email);
-    var formattedGithub = HTMLgithub.replace('%data%', this.contacts.github);
+    var formattedEmail = HTMLemail.replace(/%data%/g, this.contacts.email);
+    var formattedGithub = HTMLgithub.replace(/%data%/g, this.contacts.github);
     var formattedLocation = HTMLlocation.replace('%data%', this.contacts.location);
 
     $('#topContacts').append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
@@ -37,13 +48,11 @@ var bio = {
     var formattedBioPic = HTMLbioPic.replace('%data%', this.biopic);
     $('#header').append(formattedBioPic);
 
-    var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage)
-    $('#header').append(formattedWelcomeMsg);
-
     if (this.skills.length > 0) {
       $('#header').append(HTMLskillsStart);
-      this.skills.forEach(function(skill) {
-        var formattedSkill = HTMLskills.replace('%data%', skill);
+      this.skills.forEach(function(skill, index) {
+        var formattedSkill = HTMLskills.replace(/%data%/g, skill);
+        formattedSkill = formattedSkill.replace('%logo%', bio.skillsLogos[index]);
         $('#skills').append(formattedSkill);
       });
     }
@@ -55,24 +64,24 @@ var work = {
   "jobs": [
     {
       "employer": "Ericsson AB",
-      "title": "Software Developer",
+      "title": "Senior Software Developer",
       "location": "Stockholm, Sweden",
       "dates": "2014 - present",
-      "description": "Working as a senior software developer for next generation radio nodes"
+      "description": "Working as a senior software developer for next generation radio nodes."
     },
     {
       "employer": "Ericsson Nikola Tesla",
       "title": "Software Developer",
       "location": "Zagreb, Croatia",
       "dates": "2008 - 2014",
-      "description": "Working as a software developer for radio nodes based on CPP platform"
+      "description": "Working as a software developer for radio nodes based on CPP platform."
     },
     {
       "employer": "Rudjer Boskovic Science Institute",
       "title": "Web Developer",
       "location": "Zagreb, Croatia",
       "dates": "2006",
-      "description": "Developing a UI for managing the institute's computer network"
+      "description": "Developed a UI for managing the institute's internal computer network."
     }
   ],
 
@@ -101,7 +110,7 @@ var projects = {
       "title": "Portfolio page",
       "dates": "2017",
       "description": "Developed my own portfolio page as a project for Udacity Frontend Developer Nanodegree",
-      "images": ["images/197x148.gif"]
+      "images": ["images/my-portfolio1-400.png"]
     }
   ],
 
@@ -149,7 +158,7 @@ var education = {
       "title": "Frontend Developer Nanodegree",
       "school": "Udacity",
       "dates": "2017",
-      "url": "http://www.udacity.com"
+      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }
   ],
 
@@ -182,14 +191,12 @@ var education = {
       $('#education').append(HTMLschoolStart);
 
       var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', course.title);
-      formattedOnlineTitle.replace('#', course.url)
+      formattedOnlineTitle = formattedOnlineTitle.replace('#', course.url)
       var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', course.school);
       var formattedOnlineDates = HTMLonlineDates.replace('%data%', course.dates);
-      var formattedOnlineUrl = HTMLonlineURL.replace('%data%', course.url);
 
       $('.education-entry:last').append(formattedOnlineTitle + formattedOnlineSchool);
       $('.education-entry:last').append(formattedOnlineDates);
-      $('.education-entry:last').append(formattedOnlineUrl);
     });
 
   }

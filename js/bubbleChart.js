@@ -17,7 +17,7 @@ $(document).ready(function () {
         {text: "CSS", count: "250", desc: "Projects at Udacity Frontend Nanodegree"},
         {text: "JavaScript", count: "100", desc: "Projects at Udacity Frontend Nanodegree"},
         {text: "Erlang", count: "450", desc: "Software developer at Ericsson"},
-        {text: "PHP", count: "170", desc: "Web developer at the Rudjer Boskovic Science Institute"},
+        {text: "PHP", count: "170", desc: "Web developer at the RBI Institute, Zagreb"},
         {text: "C", count: "650", desc: "Software Developer at Ericsson"},
         {text: "GIT", count: "600", desc: "Daily use - Udacity, Ericsson, Github"}
       ],
@@ -30,7 +30,7 @@ $(document).ready(function () {
         options: {
           text: "(See more detail)",
           style: {
-            "font-size": "12px",
+            "font-size": "16px",
             "font-style": "italic",
             "font-family": "Source Sans Pro, sans-serif",
             "font-weight": "700",

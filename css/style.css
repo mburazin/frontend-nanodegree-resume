@@ -11,46 +11,57 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+}
+
+body {
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 .clear-fix {
   overflow: auto;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .education-entry,
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  margin: 2em 0;
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
+  font-size: 2.5em;
+  color: #1199c3;
+  font-weight: 400;
+  line-height: 1.2em;
   display: inline;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
+  font-size: 1.5em;
+  color: #444;
+  line-height: 1.225em;
   padding: 10px;
 }
 
 h3 {
   font-style: italic;
-  font-size: 20px;
+  font-size: 1.25em;
+  font-weight: 400;
   color: #000;
-  line-height: 22px;
+  line-height: 1.1em;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #4a4a4a;
-  line-height: 17px;
+  line-height: 1em;
 }
 
 h2,
@@ -84,41 +95,66 @@ h5 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 1em;
   color: #333;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
+  color: #167ac6;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+.contacts-link {
+  display: inline;
+  color: #555;
+}
+
+#topContacts {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  margin: 1em 0 2em;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #444;
   line-height: 28px;
+  text-align: right;
+  flex: 2;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #1199c3;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.skills-logo {
+  width: 50px;;
 }
 
-.orange-text {
-  color: #f5ae23;
+.logo-container {
+  margin: 2em 0;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #fff;
+.blue {
+  background-color: #1199c3;
+}
+
+.blue-text {
+  color: #1199c3;
+}
+
+.gray-text {
+  /*font-weight: bold;*/
+  color: #555;
 }
 
 .gray {
@@ -128,12 +164,19 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #c8c8c8;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #c8c8c8;
+}
+
+.header-title {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
 }
 
 .flex-box {
@@ -142,6 +185,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   padding: 10px;
 }
 
@@ -168,19 +212,36 @@ ul {
   border-radius: 50%;
 }
 
-img {
-  padding: 10px;
+.project-snapshot {
+  border: 1px solid #eee;
+  margin: 1em 0;
+  /* padding left 5% + right 5% = 10% */
+  max-width: 90%;
 }
+
+/*img {
+  padding: 10px;
+}*/
 
 span {
   padding: 5px;
 }
 
-#lets-connect {
-  text-align: center;
-}
-
 /* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1100px) {
+  /*#topContacts {
+    font-size: 0.8em;
+  }*/
+
+  .flex-box {
+    justify-content: space-between;
+  }
+
+  .flex-item {
+    width: 50%;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
@@ -232,8 +293,7 @@ span {
   }
 }
 
-
-
+/* BubbleChart styles */
 .bubbleChart {
   min-width: 100px;
   max-width: 960px;
@@ -242,4 +302,14 @@ span {
 }
 .bubbleChart svg{
   background: #f3f3f3;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+
+  .bubbleChart {
+    height: 400px;
+  }
 }
