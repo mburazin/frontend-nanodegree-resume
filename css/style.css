@@ -17,24 +17,20 @@ h6 {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font: 16px 'Roboto', sans-serif;
 }
 
 h1 {
-  font-family: 'Maven Pro', sans-serif;
-  font-size: 2.5em;
+  font: 400 2.5em/1.2em 'Maven Pro', sans-serif;
   color: #1199c3;
-  font-weight: 400;
-  line-height: 1.2em;
   display: inline;
 }
 
 h2 {
   font-weight: bold;
   font-size: 1.5em;
-  color: #444;
   line-height: 1.225em;
+  color: #444;
   padding: 10px;
 }
 
@@ -42,15 +38,15 @@ h3 {
   font-style: italic;
   font-size: 1.25em;
   font-weight: 400;
-  color: #000;
   line-height: 1.1em;
+  color: #000;
 }
 
 h4 {
   font-weight: bold;
   font-size: 0.875em;
-  color: #4a4a4a;
   line-height: 1em;
+  color: #4a4a4a;
 }
 
 h2,
@@ -62,8 +58,8 @@ h5 {
 
 p {
   font-size: 1em;
-  color: #333;
   line-height: 21px;
+  color: #333;
 }
 
 span {
@@ -73,7 +69,7 @@ span {
 a {
   color: #167ac6;
   text-decoration: none;
-  margin-top: 10px;
+  margin: 10px 0 0;
   display: block;
 }
 
@@ -109,18 +105,17 @@ ul {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
   line-height: 16px;
+  color: #999;
   float: left;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
   line-height: 16px;
+  color: #999;
   float: right;
-
 }
 
 .education-entry,
@@ -155,8 +150,6 @@ h3+.education-entry {
 
 .header-title {
   display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
   align-items: baseline;
 }
 
@@ -165,11 +158,8 @@ h3+.education-entry {
 }
 
 .welcome-message {
-  font-family: 'Maven Pro', sans-serif;
-  font-style: italic;
-  font-size: 18px;
+  font: italic 18px/28px 'Maven Pro', sans-serif;
   color: #444;
-  line-height: 28px;
   text-align: right;
   flex: 2;
 }
@@ -223,7 +213,7 @@ h3+.education-entry {
   margin: 0 auto;
 }
 
-.bubbleChart svg{
+.bubbleChart svg {
   background: #f3f3f3;
 }
 
@@ -250,7 +240,6 @@ h3+.education-entry {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
 }
 
 
@@ -264,16 +253,7 @@ h3+.education-entry {
 
 /*******************************/
 /* Flexbox styles              */
-.flex-contacts {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-}
-
+.flex-contacts,
 .flex-skills,
 .flex-projects {
   display: -webkit-flex;
@@ -300,12 +280,6 @@ h3+.education-entry {
 
   .blue-text {
     padding: 0 0 0 20%;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
   }
 }
 
@@ -336,10 +310,6 @@ h3+.education-entry {
   #skills-h3,
   .biopic {
     display: none;
-  }
-
-  #lets-connect {
-    margin-top: 10%;
   }
 }
 

@@ -36,7 +36,7 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLBubbleChartStart = '<div class="bubbleChart"></div>'
+var HTMLBubbleChartStart = '<div class="bubbleChart"></div>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';

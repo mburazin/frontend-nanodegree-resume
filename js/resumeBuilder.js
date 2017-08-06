@@ -33,7 +33,7 @@ var bio = {
     var formattedName = HTMLheaderName.replace('%data%', this.name);
     var formattedRole = HTMLheaderRole.replace('%data%', this.role);
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', this.welcomeMessage);
-    $('.header-title').prepend(formattedWelcomeMsg)
+    $('.header-title').prepend(formattedWelcomeMsg);
     $('.header-title').prepend(formattedRole);
     $('.header-title').prepend(formattedName);
 
@@ -99,7 +99,7 @@ var work = {
       $('.work-entry:last').append(formattedLocation);
       $('.work-entry:last').append(formattedDates);
       $('.work-entry:last').append(formattedDescription);
-    })
+    });
   }
 };
 
@@ -194,7 +194,7 @@ var education = {
       $('#education').append(HTMLschoolStart);
 
       var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', course.title);
-      formattedOnlineTitle = formattedOnlineTitle.replace('#', course.url)
+      formattedOnlineTitle = formattedOnlineTitle.replace('#', course.url);
       var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', course.school);
       var formattedOnlineDates = HTMLonlineDates.replace('%data%', course.dates);
 
