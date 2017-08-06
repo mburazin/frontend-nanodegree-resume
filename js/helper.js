@@ -15,18 +15,18 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="header-lead">%data%</span>';
 
-var HTMLcontactGeneric = '<li class="flex-contact"><span class="blue-text">%contact%</span><span class="gray-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-contact"><span class="blue-text">mobile</span><span class="gray-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-contact"><span class="blue-text">email</span><span class="gray-text"><a class="contacts-link" href="mailto:%data%">%data%</a></span></li>';
-var HTMLtwitter = '<li class="flex-contact"><span class="blue-text">twitter</span><span class="gray-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-contact"><span class="blue-text">github</span><span class="gray-text"><a class="contacts-link" href="%data%">%data%</a></span></li>';
-var HTMLblog = '<li class="flex-contact"><span class="blue-text">blog</span><span class="gray-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-contact"><span class="blue-text">location</span><span class="gray-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-contact"><span class="highlighted-text">%contact%</span><span class="normal-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-contact"><span class="highlighted-text">mobile</span><span class="normal-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-contact"><span class="highlighted-text">email</span><span class="normal-text"><a class="contacts-link" href="mailto:%data%">%data%</a></span></li>';
+var HTMLtwitter = '<li class="flex-contact"><span class="highlighted-text">twitter</span><span class="normal-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-contact"><span class="highlighted-text">github</span><span class="normal-text"><a class="contacts-link" href="%data%">%data%</a></span></li>';
+var HTMLblog = '<li class="flex-contact"><span class="highlighted-text">blog</span><span class="normal-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-contact"><span class="highlighted-text">location</span><span class="normal-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLbioPic = '<img src="%data%" class="biopic" alt="A photo of Marko Burazin on the beach">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills-h3 blue-text">Skills at a Glance:</h3><ul id="skills" class="flex-skills"></ul>';
+var HTMLskillsStart = '<h3 id="skills-h3 highlighted-text">Skills at a Glance:</h3><ul id="skills" class="flex-skills"></ul>';
 var HTMLskills = '<li class="logo-container flex-logo"><img class="skills-logo" src="%logo%" alt="%data% logo"></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
@@ -43,7 +43,7 @@ var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectContainer = '<div class="flex-projects"></div>';
-var HTMLprojectImage = '<img class="project-snapshot" src="%data%">';
+var HTMLprojectImage = '<img class="project-snapshot" src="%data%" alt="Project snapshot image">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';

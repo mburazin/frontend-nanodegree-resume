@@ -44,27 +44,27 @@
       resume below. You can pretty easily figure out what each section will
       display by looking at the id or at what's written between the <h2> tags.
       -->
-      <header id="header" class="dark-gray center-content clear-fix">
+      <header id="header" class="dark-background center-content clear-fix">
         <div class="header-title"></div>
         <ul id="topContacts" class="flex-contacts"></ul>
       </header>
-      <section id="workExperience" class="gray section">
+      <section id="workExperience" class="light-background section">
         <h2>Work Experience</h2>
       </section>
-      <aside id="bubbleChart" class="gray">
+      <aside id="bubbleChart" class="light-background">
         <h2>Where I got my skills</h2>
       </aside>
       <section id="projects" class="section">
         <h2>Projects</h2>
       </section>
-      <section id="education" class="gray section">
+      <section id="education" class="light-background section">
         <h2>Education</h2>
       </section>
       <section id="mapDiv" class="section">
         <h2>Where I've Lived and Worked</h2>
       </section>
-      <footer id="lets-connect" class="dark-gray">
-        <h2 class="blue center-text">Let's Connect</h2>
+      <footer id="lets-connect" class="dark-background">
+        <h2 class="lets-connect-title center-text">Let's Connect</h2>
           <ul id="footerContacts" class="flex-contacts">
         </ul>
       </footer>
@@ -86,40 +86,10 @@
     -->
     <script src="js/resumeBuilder.js"></script>
 
-
     <!--
-    These scripts are written in JavaScript. You'll be breaking them down as part of
-    a quiz. Essentially, the next few lines are checking to see if you have not
-    changed each section of the resume. If you have not made any changes to a section
-    of the resume, then that part of the resume does not show up. More on this in the
-    course.
+    The following script is used to show sections defined in this page
+    if they have been populated with data, otherwise they are hidden
     -->
-
-    <script>
-      if(document.getElementsByClassName('flex-contact').length === 0) {
-        document.getElementById('topContacts').style.display = 'none';
-      }
-      if(document.getElementsByTagName('h1').length === 0) {
-        document.getElementById('header').style.display = 'none';
-      }
-      if(document.getElementsByClassName('work-entry').length === 0) {
-        document.getElementById('workExperience').style.display = 'none';
-      }
-      if(document.getElementsByClassName('bubbleChart').length === 0) {
-        document.getElementById('bubbleChart').style.display = 'none';
-      }
-      if(document.getElementsByClassName('project-entry').length === 0) {
-        document.getElementById('projects').style.display = 'none';
-      }
-      if(document.getElementsByClassName('education-entry').length === 0) {
-        document.getElementById('education').style.display = 'none';
-      }
-      if(document.getElementsByClassName('flex-contact').length === 0) {
-        document.getElementById('lets-connect').style.display = 'none';
-      }
-      if(document.getElementById('map') === null) {
-        document.getElementById('mapDiv').style.display = 'none';
-      }
-    </script>
+    <script src="js/showPage.js"></script>
   </body>
 </html>

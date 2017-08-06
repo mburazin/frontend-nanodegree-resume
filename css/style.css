@@ -93,11 +93,11 @@ ul {
   padding: 20px 0 40px 0;
 }
 
-.dark-gray {
+.dark-background {
   background-color: #c8c8c8;
 }
 
-.gray {
+.light-background {
   background-color: #f3f3f3;
   clear: both;
 }
@@ -194,11 +194,11 @@ h3+.education-entry {
   margin: 2em 0;
 }
 
-.blue-text {
+.highlighted-text {
   color: #1199c3;
 }
 
-.gray-text {
+.normal-text {
   color: #555;
 }
 
@@ -246,7 +246,7 @@ h3+.education-entry {
 /*******************************/
 /* Let's connect footer        */
 
-.blue {
+.lets-connect-title {
   background-color: #1199c3;
 }
 
@@ -278,7 +278,7 @@ h3+.education-entry {
     width: 50%;
   }
 
-  .blue-text {
+  .highlighted-text {
     padding: 0 0 0 20%;
   }
 }
@@ -303,7 +303,7 @@ h3+.education-entry {
     text-align: center;
   }
 
-  .blue-text {
+  .highlighted-text {
     padding: 0;
   }
 
