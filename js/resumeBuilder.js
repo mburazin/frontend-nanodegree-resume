@@ -3,7 +3,7 @@ var bio = {
   "name": "Marko Burazin",
   "role": "Web Developer",
   "contacts": {
-    "mobile": "+46 72 5074916",
+    "mobile": "+46 72 1234567",
     "email": "marko.burazin1@gmail.com",
     "github": "https://github.com/mburazin",
     "location": "Stockholm, Sweden"
@@ -110,13 +110,15 @@ var projects = {
       "title": "Portfolio page",
       "dates": "2017",
       "description": "Developed my own portfolio page as a project for Udacity Frontend Developer Nanodegree",
-      "images": ["images/my-portfolio1-400.png"]
+      "images": ["images/my-portfolio1-small-400.png", "images/my-portfolio2-small-400.png"],
+      "url": "https://mburazin.github.io/my-portfolio"
     }
   ],
 
   "display": function() {
     this.projects.forEach(function(project) {
       var formattedTitle = HTMLprojectTitle.replace('%data%', project.title);
+      formattedTitle = formattedTitle.replace('#', project.url);
       var formattedDates = HTMLprojectDates.replace('%data%', project.dates);
       var formattedDescription = HTMLprojectDescription.replace('%data%', project.description);
 
@@ -125,9 +127,10 @@ var projects = {
       $('.project-entry:last').append(formattedDates);
       $('.project-entry:last').append(formattedDescription);
 
+      $('.project-entry:last').append(HTMLprojectContainer);
       for (var i=0; i<project.images.length; i++) {
         var formattedImage = HTMLprojectImage.replace('%data%', project.images[i]);
-        $('.project-entry:last').append(formattedImage);
+        $('.flex-projects').append(formattedImage);
       }
     });
   }
@@ -212,13 +215,5 @@ education.display();
 // Make the locations where I lived and worked visible on google maps
 $('#mapDiv').append(googleMap);
 
-// $('#main').append(internationalizeButton);
-// function inName(fullName) {
-//   var names = fullName.trim().split(" ");
-//   var newName = names[0][0].toUpperCase() + names[0].slice(1).toLowerCase();
-//
-//   newName += " ";
-//   newName += names[1].toUpperCase();
-//
-//   return newName;
-// }
+// Show the skills bubble chart
+$('#bubbleChart').append(HTMLBubbleChartStart);

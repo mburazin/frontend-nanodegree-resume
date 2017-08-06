@@ -1,3 +1,6 @@
+/*******************************/
+/* General styles              */
+
 body,
 div,
 ul,
@@ -18,22 +21,8 @@ body {
   font-size: 16px;
 }
 
-.clear-fix {
-  overflow: auto;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-  margin: 2em 0;
-}
-
 h1 {
+  font-family: 'Maven Pro', sans-serif;
   font-size: 2.5em;
   color: #1199c3;
   font-weight: 400;
@@ -69,13 +58,53 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
+}
 
+p {
+  font-size: 1em;
+  color: #333;
+  line-height: 21px;
+}
+
+span {
+  padding: 5px;
+}
+
+a {
+  color: #167ac6;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .section {
   padding: 20px 0 40px 0;
 }
 
+.dark-gray {
+  background-color: #c8c8c8;
+}
+
+.gray {
+  background-color: #f3f3f3;
+  clear: both;
+}
 
 .date-text {
   font-style: italic;
@@ -94,21 +123,55 @@ h5 {
 
 }
 
-p {
-  font-size: 1em;
-  color: #333;
-  line-height: 21px;
+.education-entry,
+.work-entry,
+.project-entry {
+  padding: 0 5%;
+  margin: 2em 0;
 }
 
-a {
-  color: #167ac6;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+.education-entry:first-of-type,
+.work-entry:first-of-type,
+.project-entry:first-of-type {
+  margin-top: 0;
 }
 
-a:hover {
-  text-decoration: underline;
+h3+.education-entry {
+  /* element(s) with .education-entry following h3 */
+  margin-top: 0;
+}
+
+.work-entry:last-of-type,
+.project-entry:last-of-type {
+  margin-bottom: 0;
+}
+
+/*******************************/
+/* Header                      */
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+.header-title {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+
+.header-lead {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.welcome-message {
+  font-family: 'Maven Pro', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #444;
+  line-height: 28px;
+  text-align: right;
+  flex: 2;
 }
 
 .contacts-link {
@@ -122,30 +185,23 @@ a:hover {
   margin: 1em 0 2em;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #444;
-  line-height: 28px;
-  text-align: right;
-  flex: 2;
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  border-radius: 50%;
 }
 
 #skills-h3 {
-  color: #1199c3;
-  display: none;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 .skills-logo {
-  width: 50px;;
+  width: 50px;
 }
 
 .logo-container {
   margin: 2em 0;
-}
-
-.blue {
-  background-color: #1199c3;
 }
 
 .blue-text {
@@ -153,33 +209,62 @@ a:hover {
 }
 
 .gray-text {
-  /*font-weight: bold;*/
   color: #555;
 }
 
-.gray {
-  background-color: #f3f3f3;
-  /*padding-bottom: 10px;*/
-  clear: both;
+
+/*******************************/
+/* BubbleChart styles          */
+
+.bubbleChart {
+  min-width: 100px;
+  max-width: 960px;
+  height: 600px;
+  margin: 0 auto;
 }
 
-.dark-gray {
-  background-color: #c8c8c8;
+.bubbleChart svg{
+  background: #f3f3f3;
 }
 
-/* TODO: Replace with image later */
-#header {
-  background-color: #c8c8c8;
+
+/*******************************/
+/* Projects section            */
+
+.project-snapshot {
+  border: 1px solid #eee;
+  margin: 2em 1em 0 0;
+  max-width: 100%;
 }
 
-.header-title {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
-  align-items: baseline;
+
+/*******************************/
+/* Google Map section          */
+
+#map {
+  display: block;
+  height: calc(100% - 49px);
+  margin: 0 5%;
 }
 
-.flex-box {
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+
+/*******************************/
+/* Let's connect footer        */
+
+.blue {
+  background-color: #1199c3;
+}
+
+
+/*******************************/
+/* Flexbox styles              */
+.flex-contacts {
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
@@ -189,57 +274,32 @@ a:hover {
   padding: 10px;
 }
 
-.flex-column {
+.flex-skills,
+.flex-projects {
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   padding: 10px;
 }
 
-.center-content {
-  padding: 2.5% 5%;
+.flex-logo {
+  text-align: center;
+  width: 14.285%;
 }
 
-ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-  border-radius: 50%;
-}
-
-.project-snapshot {
-  border: 1px solid #eee;
-  margin: 1em 0;
-  /* padding left 5% + right 5% = 10% */
-  max-width: 90%;
-}
-
-/*img {
-  padding: 10px;
-}*/
-
-span {
-  padding: 5px;
-}
-
+/*************************************************/
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1100px) {
-  /*#topContacts {
-    font-size: 0.8em;
-  }*/
-
-  .flex-box {
-    justify-content: space-between;
+  .flex-contact {
+    width: 50%;
   }
 
-  .flex-item {
-    width: 50%;
+  .blue-text {
+    padding: 0 0 0 20%;
   }
 }
 
@@ -256,52 +316,43 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
   .biopic {
     width: 150px;
   }
+
   .welcome-message {
     display: none;
   }
-}
 
-#map {
-  display: block;
-  height: calc(100% - 49px);
-  margin: 0 5%;
-}
+  .flex-contact {
+    width: 100%;
+    text-align: center;
+  }
 
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
+  .blue-text {
+    padding: 0;
+  }
 
-@media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
-    display: block;
+    display: none;
+  }
+
+  #lets-connect {
+    margin-top: 10%;
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  #main {
-    width: 1200px;
-    margin: 0 auto;
+@media only screen and (max-width: 600px) {
+  .flex-logo {
+    width: 25%;
   }
 }
 
-/* BubbleChart styles */
-.bubbleChart {
-  min-width: 100px;
-  max-width: 960px;
-  height: 600px;
-  margin: 0 auto;
-}
-.bubbleChart svg{
-  background: #f3f3f3;
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -311,5 +362,18 @@ span {
 
   .bubbleChart {
     height: 400px;
+  }
+
+  .project-snapshot {
+    margin-right: 0;
+  }
+}
+
+
+/* Limit viewport to no more than 1200px width */
+@media only screen and (min-width: 1200px) {
+  #main {
+    width: 1200px;
+    margin: 0 auto;
   }
 }

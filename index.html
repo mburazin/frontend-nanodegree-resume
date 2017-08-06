@@ -34,7 +34,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAS8ev4BWen-KaQokv5o92IXDrzL5sRYX8"></script>
 
   <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Maven+Pro" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 
   <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
@@ -60,32 +60,30 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
+    <header id="header" class="dark-gray center-content clear-fix">
       <div class="header-title"></div>
-      <ul id="topContacts" class="flex-box"></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray section">
+      <ul id="topContacts" class="flex-contacts"></ul>
+    </header>
+    <section id="workExperience" class="gray section">
       <h2>Work Experience</h2>
-    </div>
-    <div class="gray section">
+    </section>
+    <aside id="bubbleChart" class="gray">
       <h2>Where I got my skills</h2>
-      <div class="bubbleChart"></div>
-    </div>
-    <div id="projects" class="section">
+    </aside>
+    <section id="projects" class="section">
       <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray section">
+    </section>
+    <section id="education" class="gray section">
       <h2>Education</h2>
-    </div>
-    <div id="mapDiv" class="section">
+    </section>
+    <section id="mapDiv" class="section">
       <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
+    </section>
+    <footer id="lets-connect" class="dark-gray">
       <h2 class="blue center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
+        <ul id="footerContacts" class="flex-contacts">
       </ul>
-    </div>
+    </footer>
   </div>
 
   <!-- "HTML is loaded by the browser in the order it appears in the file. If the JavaScript is loaded first and it is supposed to affect the HTML below it, it might not work, as the JavaScript would be loaded before the HTML it is supposed to work on. Therefore, putting JavaScript near the bottom of the HTML page is often the best strategy."
@@ -143,7 +141,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     */
 
 
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if(document.getElementsByClassName('flex-contact').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
@@ -152,13 +150,16 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
     }
+    if(document.getElementsByClassName('bubbleChart').length === 0) {
+      document.getElementById('bubbleChart').style.display = 'none';
+    }
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.display = 'none';
     }
-    if(document.getElementsByClassName('flex-item').length === 0) {
+    if(document.getElementsByClassName('flex-contact').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';
     }
     if(document.getElementById('map') === null) {
