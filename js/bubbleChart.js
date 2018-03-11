@@ -18,9 +18,12 @@ $(document).ready(function () {
         {text: "JavaScript", count: "100", desc: "Projects at Udacity Frontend Nanodegree"},
         {text: "Go", count: "500", desc: "Software developer at Ericsson"},
         {text: "Erlang", count: "450", desc: "Software developer at Ericsson"},
-        {text: "PHP", count: "170", desc: "Web developer at the RBI Institute, Croatia"},
+        {text: "PHP+MySql", count: "170", desc: "Web developer at the RBI Institute, Croatia"},
         {text: "C", count: "650", desc: "Software Developer at Ericsson"},
-        {text: "GIT", count: "600", desc: "Daily use - Udacity, Ericsson, Github"}
+        {text: "GIT", count: "600", desc: "Daily use - Udacity, Ericsson, Github"},
+        {text: "PostgreSQL", count: "500", desc: "Software Developer at Ericsson"},
+        {text: "Docker", count: "200", desc: "Software Developer at Ericsson"},
+        {text: "Strongswan", count: "400", desc: "Software Developer at Ericsson"},
       ],
       eval: function (item) {return item.count;},
       classed: function (item) {return item.text.split(" ").join("");}
