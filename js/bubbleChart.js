@@ -16,6 +16,7 @@ $(document).ready(function () {
         {text: "HTML", count: "250", desc: "Projects at Udacity Frontend Nanodegree"},
         {text: "CSS", count: "250", desc: "Projects at Udacity Frontend Nanodegree"},
         {text: "JavaScript", count: "100", desc: "Projects at Udacity Frontend Nanodegree"},
+        {text: "Go", count: "500", desc: "Software developer at Ericsson"},
         {text: "Erlang", count: "450", desc: "Software developer at Ericsson"},
         {text: "PHP", count: "170", desc: "Web developer at the RBI Institute, Croatia"},
         {text: "C", count: "650", desc: "Software Developer at Ericsson"},
