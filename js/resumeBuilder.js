@@ -16,7 +16,10 @@ var bio = {
     "Erlang",
     "GO",
     "C",
-    "git"
+    "git",
+    "PostgreSQL",
+    "Docker",
+    "Strongswan"
   ],
   "skillsLogos": [
     "images/html5_logo.svg",
@@ -26,6 +29,9 @@ var bio = {
     "images/go_logo.png",
     "images/c_logo.svg",
     "images/git_logo.svg",
+    "images/postgresql_logo.png",
+    "images/docker_logo.png",
+    "images/strongswan_logo.png"
   ],
   "biopic": "images/me_naturalpools.png",
 
